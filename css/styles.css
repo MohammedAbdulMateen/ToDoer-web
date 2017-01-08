@@ -1,0 +1,19 @@
+/* ------------------ list styles ------------------ */
+
+li a {
+    display: block;
+}
+
+/* ------------------ list styles ------------------ */
+
+/* ------------------ angular styles ------------------ */
+
+.ng-invalid.ng-dirty {
+    border-color: #ff0000;
+}
+
+.ng-valid.ng-dirty {
+    border-color: #008800;
+}
+
+/* ------------------ angular styles ------------------ */

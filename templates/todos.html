@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="todoform" novalidate class="form-horizontal" ng-submit="todoform.$valid && vm.addTodo(vm.action, todoform)">
+            <div class="form-group">
+                <label for="todoname" class="col-md-1 control-label">Todo</label>
+                <div class="col-md-11">
+                    <input type="text" name="todoname" placeholder="Todo" class="form-control" ng-model="vm.action" ng-required="true"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-1 col-md-11">
+                    <input type="submit" name="addtodobtn" value="Add" class="btn btn-default"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <ol class="list-group">
+        <li class="list-group-item" ng-if="vm.todos.length === 0">
+            <span>Its go time, add some todos</span>
+        </li>
+
+        <li class="list-group-item" ng-repeat="todo in vm.todos">
+            <input type="checkbox" name="actiondone" ng-model="todo.done" ng-change="vm.updateTodo(todo.id, todo.done)"/>
+            <label for="actiondone" ng-bind="todo.action"></label>
+        </li>
+    </ol>
+</div>
